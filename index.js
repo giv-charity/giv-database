@@ -20,7 +20,6 @@ const db = mongoose.connection;
 
 // checks if connection with the database is successful
 db.once("open", () => console.log("Connection to the database successful!"));
-db.on("error", console.error("MongoDB connection error!"));
 
 //Allows us to use req.body
 app.use(bodyParser.urlencoded({ extended: false }));
